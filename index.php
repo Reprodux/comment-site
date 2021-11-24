@@ -12,7 +12,7 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 $query = "SELECT * FROM comment";
-  mysqli_query($con, $query) or die('Error querying database');
+  mysqli_query($conn, $query) or die('Error querying database');
 
   $result = mysqli_query($conn,$query);
 
@@ -25,4 +25,4 @@ while ($row = mysqli_fetch_array($result)) : ?>
     </tr>
     
 <?php  endwhile; 
-mysqli_close($cons);?>
+mysqli_close($conn);?>
