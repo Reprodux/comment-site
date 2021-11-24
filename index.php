@@ -23,7 +23,6 @@ while ($row = mysqli_fetch_array($result)) : ?>
         <td><?php echo $row['reminder']; ?></td>
 
     </tr>
-    <tr>
-          <td colspan='2' align='right'><input type='submit' name='delete' value='Delete Entry'></td>
-    </tr>
-    <?php endwhile ?>
+    
+<?php  endwhile; 
+mysqli_close($cons);?>
