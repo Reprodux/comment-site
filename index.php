@@ -11,6 +11,19 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
+$query = "SELECT * FROM comment";
+  mysqli_query($con, $query) or die('Error querying database');
 
-echo "Testing testing the php 123"
-?>
+  $result = mysqli_query($conn,$query);
+
+echo "Testing testing the php 123";
+while ($row = mysqli_fetch_array($result)) : ?>
+    <tr>
+        <!--Each table column is echoed in to a td cell-->
+        <td><?php echo $row['reminder']; ?></td>
+
+    </tr>
+    <tr>
+          <td colspan='2' align='right'><input type='submit' name='delete' value='Delete Entry'></td>
+    </tr>
+    <?php endwhile ?>
