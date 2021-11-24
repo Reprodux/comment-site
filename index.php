@@ -16,12 +16,13 @@ $query = "SELECT * FROM comment";
 
   $result = mysqli_query($conn,$query);
 
-echo "Testing testing the php 123";
+
 while ($row = mysqli_fetch_array($result)) : ?>
     <tr>
         <!--Each table column is echoed in to a td cell-->
+        <td><?php echo $row['Name']; ?></td>
         <td><?php echo $row['Email']; ?></td>
-
+        <td><?php echo $row['Comment']; ?></td>
     </tr>
     
 <?php  endwhile; 
