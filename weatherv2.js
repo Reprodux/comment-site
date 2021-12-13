@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
 
 
   function weather(lat,long){
-    var URL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=d94601353a64a5fb2128ab4ac54617bd&units=metric`;
+    var URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=d94601353a64a5fb2128ab4ac54617bd&units=metric`;
 
     jQuery.getJSON(URL,function(data){
       console.log(data);
@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
     jQuery('#city').html(city);
     jQuery("#temp").html(temp);
     jQuery('#desc').html(desc);
-    jQuery('#icon').attr('src',"http://openweathermap.org/img/wn/" + icon + ".png");
+    jQuery('#icon').attr('src',"https://openweathermap.org/img/wn/" + icon + ".png");
 
   }
 
@@ -42,7 +42,7 @@ jQuery(document).ready(function(){
 
 
   function weekcast(lat,long){
-    var URL  = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=d94601353a64a5fb2128ab4ac54617bd&units=metric`;
+    var URL  = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=d94601353a64a5fb2128ab4ac54617bd&units=metric`;
 
     jQuery.getJSON(URL,function(data){
       console.log(data);
@@ -63,7 +63,7 @@ jQuery(document).ready(function(){
 
       jQuery('#day'+ num).html(day);
       jQuery('#day' + num + '-degree').html(degree);
-      jQuery('#day' + num + '-icon').attr('src',"http://openweathermap.org/img/wn/" + icon + ".png")
+      jQuery('#day' + num + '-icon').attr('src',"https://openweathermap.org/img/wn/" + icon + ".png")
       jQuery('#day' + num + '-desc').html(desc);
       num = num + 1
 
