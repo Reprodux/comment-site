@@ -23,7 +23,7 @@ $result = mysqli_query($conn,$query);
   <head>
     <meta charset="utf-8">
     <title>DisplayV2</title>
-    <link rel="stylesheet" href="stylesV2.css">
+    <link rel="stylesheet" href="stylesV4.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -81,9 +81,10 @@ $result = mysqli_query($conn,$query);
           <!--Use a while loop to make a table row for every DB row-->
           <?php while ($row = mysqli_fetch_array($result)) : ?>
           <tr>
-              <!--Each table column is echoed in to a td cell-->
-              <td><?php echo $row['reminder']; ?></td>
-
+                <!--Each table column is echoed in to a td cell-->
+                <td><?php echo $row['Name']; ?></td>
+                <td><?php echo $row['Email']; ?></td>
+                <td><?php echo $row['Comment']; ?></td>
           </tr>
           <tr>
                 <td colspan='2' align='right'><input type='submit' name='delete' value='Delete Entry'></td>

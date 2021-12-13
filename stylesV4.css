@@ -5,19 +5,24 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-
 /*header with the time*/
+.header-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .header{
-  height: 80px;
+  height: 100px;
   display: block;
   margin: 0 auto;
-  border-bottom: 1px solid #fff;
-  background-color: #B2d6ff;
+  /*border: 1px solid #B2d6ff;*/
 }
 
 .time{
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 20px 20px;
 }
 
@@ -25,21 +30,17 @@
 
 .weather-grid{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:  center;
+  align-items:  center;
   flex-direction: row;
-
 }
-
-
-
 /*current weather*/
 .current{
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: 2px solid #ff0000;
+  /*border: 2px solid #ff0000;*/
   width: 400px;
   height: 300px;
   flex-wrap: wrap;
@@ -71,7 +72,7 @@
 /*weekcast*/
 .weekcast{
   display:block;
-  border: 2px solid #5995da;
+  /*border: 2px solid #5995da;*/
   width: 400px;
   height: 300px;
 
@@ -95,15 +96,48 @@
 
 
 
+
 /*reminders*/
 .reminder-container{
-  height: 400px;
-  display: block;
-  border: 2px solid #66ff33;
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /*border: 2px solid #66ff33;*/
+  overflow: hidden;
 }
-
 
 .rhead{
   text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.button{
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover{
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #ff0000;
+  color: red;
+}
+
+.table{
+  width: 100%;
+  text-align: center;
+}
+
+td{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+
+/*other aesthetics*/
+body{
+  background-color: #33343a;
+  color: white;
 }
