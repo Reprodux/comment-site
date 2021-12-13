@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/*header with the time*/
+.header{
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid #fff;
+  background-color: #B2d6ff;
+}
+
+.time{
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px 20px;
+}
+
+/*weather section layout*/
+
+.weather-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+
+
+/*current weather*/
+.current{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #ff0000;
+  width: 400px;
+  height: 300px;
+  flex-wrap: wrap;
+}
+
+.sign{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.num{
+  font-size: 4rem;
+}
+
+.degrees{
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.cirle{
+  font-size: 4rem;
+}
+
+/*weekcast*/
+.weekcast{
+  display:block;
+  border: 2px solid #5995da;
+  width: 400px;
+  height: 300px;
+
+
+}
+
+
+.future{
+  text-align: center;
+}
+
+.weekcast-info{
+  display: block;
+
+  text-align: center;
+}
+
+.weekcast-info > ul{
+  display: inline-block;
+}
+
+
+
+/*reminders*/
+.reminder-container{
+  height: 400px;
+  display: block;
+  border: 2px solid #66ff33;
+  padding: 1rem;
+}
+
+
+.rhead{
+  text-align: center;
+}
