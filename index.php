@@ -73,7 +73,7 @@ $result = mysqli_query($conn,$query);
       <table>
       <thead>
           <tr>
-              <th>Reminders</th>
+              <th>Comments left by Visitors: </th>
           </tr>
       </thead>
       <tbody>
