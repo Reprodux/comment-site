@@ -22,7 +22,7 @@ $result = mysqli_query($conn,$query);
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>DisplayV2</title>
+    <title>Comment Site</title>
     <link rel="stylesheet" href="stylesV4.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
