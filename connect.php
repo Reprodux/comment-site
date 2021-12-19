@@ -42,6 +42,7 @@ if(!empty($name) || !empty($email) || !empty($comment)){
             $stmt -> bind_param("sss", $name, $email, $comment);
             $stmt -> execute();
             echo "Comment saved!";
+            header("location: https://comment-site.herokuapp.com/");
         } else{
             echo "To prevent clutter, one comment from an email is allowed";
         }
