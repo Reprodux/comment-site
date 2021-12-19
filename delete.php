@@ -18,6 +18,8 @@ $id = $_GET['id'];
 
 $delete = mysqli_query($conn, "DELETE FROM comment WHERE id = '$id'");
 
+echo $delete;
+
 if($delete){
     mysqli_close($db);
     header("location: https://comment-site.herokuapp.com");
