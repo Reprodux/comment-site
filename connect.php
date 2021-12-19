@@ -43,6 +43,7 @@ if(!empty($name) || !empty($email) || !empty($comment)){
             $stmt -> execute();
             echo "Comment saved!";
             header("location: https://comment-site.herokuapp.com/");
+            exit();
         } else{
             echo "To prevent clutter, one comment from an email is allowed";
         }

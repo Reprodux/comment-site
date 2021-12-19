@@ -21,7 +21,7 @@ $delete = mysqli_query($conn, "DELETE FROM comment WHERE id = '$id'");
 if($delete){
     mysqli_close($db);
     header("location:https://comment-site.herokuapp.com/index.php");
-    exit;
+    exit();
 }
 else{
     echo "Error deleting record";
