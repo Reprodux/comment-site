@@ -92,11 +92,23 @@ $result = mysqli_query($conn,$query);
           </tr>
           <?php endwhile ?>
           <?
-          mysqli_close($conm)
+          mysqli_close($conn)
           ?>
       </tbody>
   </table>
 
+    </div>
+    <div class="form">
+      <form action="connect.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" size="28"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" size="28"><br>
+        <label for="comment">Comment:</label><br>
+        <textarea type="text" id="comment"  cols="30" rows="10" name="comment" style="font-family: Arial"></textarea><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
     </div>
 
   </body>
