@@ -88,7 +88,7 @@ $result = mysqli_query($conn,$query);
                 <td><?php echo $row['Comment']; ?></td>
           </tr>
           <tr>
-                <td colspan='2' align='right'><input type='submit' name='delete' value='Delete Entry'></td>
+            <td><a id="button" class= 'button' href="delete.php?id=<?php echo $row['id']; ?>" >Delete Entry</a></td>
           </tr>
           <?php endwhile ?>
           <?
