@@ -1,7 +1,7 @@
 <?php
 $name = $_POST['name'];
 $email = $_POST['email'];
-$comment = $_Post['comment'];
+$comment = $_POST['comment'];
 
 if(empty($name)){
     $name = "N/A";
