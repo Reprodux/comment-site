@@ -74,7 +74,7 @@ $result = mysqli_query($conn,$query);
       <table>
       <thead>
           <tr>
-              <th>Comments left by Visitors: </th>
+              <th style="justify-content: center">Comments left by Visitors: </th>
           </tr>
       </thead>
       <tbody>
