@@ -105,7 +105,7 @@ $result = mysqli_query($conn,$query);
         <label for="email">Email:</label><br>
         <input type="text" id="email" name="email" size="28"><br>
         <label for="comment">Comment:</label><br>
-        <textarea type="text" id="comment"  cols="30" rows="10" name="comment" form = "form-control" style="font-family: Arial"></textarea><br>
+        <input type="text" id="comment"  cols="30" rows="10" name="comment" form = "form-control" style="font-family: Arial"></input><br>
         <br>
         <input type="submit" value="Submit">
     </form>
