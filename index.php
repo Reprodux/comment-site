@@ -69,14 +69,7 @@ $result = mysqli_query($conn,$query);
         </div>
       </div>
     </div>
-    </div>
-    <div class="form">
-      <form action="connect-todo.php" method="POST">
-        <label for="item">Item:</label><br>
-        <input type="text" id="item" name="item" size="28"><br>
-        <input type="submit" id="submit" name="submit">
-    </form>
-    </div>
+
     <div class="reminder-container">
       <table>
       <thead>
@@ -102,6 +95,14 @@ $result = mysqli_query($conn,$query);
       </tbody>
   </table>
 
+    </div>
+    <div class="form">
+      <form action="connect-todo.php" method="POST">
+        <label for="item">Item:</label><br>
+        <input type="text" id="item" name="item" size="28"><br>
+        <input type="submit" id="submit" name="submit">
+    </form>
+    </div>
 
   </body>
 </html>
