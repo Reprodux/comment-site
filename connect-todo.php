@@ -40,6 +40,7 @@ if(!empty($item)){
         }
         $stmt -> close();
         mysqli_close($conn);
+        header("Refresh");
         header("location: https://comment-site.herokuapp.com");
         exit();
     }
