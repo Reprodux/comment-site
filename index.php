@@ -11,7 +11,7 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-$query = "SELECT * FROM comment";
+$query = "SELECT * FROM to_do";
   mysqli_query($conn, $query) or die('Error querying database');
 
 $result = mysqli_query($conn,$query);
@@ -74,7 +74,7 @@ $result = mysqli_query($conn,$query);
       <table>
       <thead>
           <tr>
-              <th style="justify-content: center">Comments left by Visitors: </th>
+              <th style="justify-content: center">To-Do List: </th>
           </tr>
       </thead>
       <tbody>
@@ -83,9 +83,7 @@ $result = mysqli_query($conn,$query);
           <?php while ($row = mysqli_fetch_array($result)) : ?>
           <tr>
                 <!--Each table column is echoed in to a td cell-->
-                <td><?php echo $row['Name']; ?></td>
-                <td><?php echo $row['Email']; ?></td>
-                <td><?php echo $row['Comment']; ?></td>
+                <td><?php echo $row['item']; ?></td>
           </tr>
           <tr>
             <td><a id="button" class= 'button' href="delete.php?id=<?php echo $row['id']; ?>" >Delete Entry</a></td>
@@ -99,15 +97,9 @@ $result = mysqli_query($conn,$query);
 
     </div>
     <div class="form">
-      <form action="connect.php" method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" size="28"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" size="28"><br>
-        <label for="comment">Comment:</label><br>
-        <textarea type="text" id="comment"  cols="30" rows="10" name="comment" style="font-family: Arial"></textarea><br>
-        <br>
-        <input type="submit" value="Submit">
+      <form action="connect-todo.php" method="POST">
+        <label for="item">Item:</label><br>
+        <input type="text" id="item" name="item" size="28"><br>
     </form>
     </div>
 
