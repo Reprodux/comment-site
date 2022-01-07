@@ -31,12 +31,12 @@ $result = mysqli_query($conn,$query);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src='time.js'></script>
     <script>
-      $(setInterval(function(){
+      setInterval(function(){
         function(){
           $("#reminder-container").load("connect-todo.php")
         },1000
 
-        })
+        }
       </script>
       
 
