@@ -11,12 +11,12 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-$query = "SELECT * FROM comment";
+$query = "SELECT * FROM to_do";
   mysqli_query($conn, $query) or die('Error querying database');
 
 $id = $_GET['id'];
 
-$delete = mysqli_query($conn, "DELETE FROM comment WHERE id = '$id'");
+$delete = mysqli_query($conn, "DELETE FROM to_do WHERE id = '$id'");
 
 echo $delete;
 
