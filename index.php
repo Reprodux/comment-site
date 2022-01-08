@@ -15,6 +15,7 @@ $query = "SELECT * FROM to_do";
   mysqli_query($conn, $query) or die('Error querying database');
 
 $result = mysqli_query($conn,$query);
+
 ?>
 
 
