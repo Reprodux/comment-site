@@ -73,7 +73,7 @@ $result = mysqli_query($conn,$query);
     </div>
 
     <script>
-      setInterval(function() { $("#item-list").load("load-items.php"})}, 4000);
+      setInterval(function() { $("#item-list").load("load-items.php")}, 4000);
     </script>
     <div class="reminder-container" id="item-list">
       <table>
