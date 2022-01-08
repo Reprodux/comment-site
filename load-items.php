@@ -6,7 +6,7 @@
     $cleardb_db = substr($cleardb_url["path"],1);
     $active_group = 'default';
     $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-
+    header("location: https://stackoverflow.com/questions/8054989/php-insert-a-variable-in-an-echo-string");
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
         echo "<td>";
