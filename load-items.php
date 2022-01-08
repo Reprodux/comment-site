@@ -6,7 +6,10 @@
     $cleardb_db = substr($cleardb_url["path"],1);
     $active_group = 'default';
     $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-    echo "<script> console.log(1) </script>";
+    $query = "SELECT * FROM to_do";
+    mysqli_query($conn, $query) or die('Error querying database');
+
+    $result = mysqli_query($conn,$query);
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
         echo "<td>";
@@ -19,5 +22,5 @@
         echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
         echo "</tr>";
     }
-    echo "<script> console.log(2) </script>";
+    
     ?>
