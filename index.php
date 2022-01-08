@@ -75,14 +75,14 @@ $result = mysqli_query($conn,$query);
     <script>
       setInterval(function() { $("#item-list").load("load-items.php")}, 4000);
     </script>
-    <div class="reminder-container" id="item-list">
+    <div class="reminder-container">
       <table>
       <thead>
           <tr>
               <th style="justify-content: center">To-Do List: </th>
           </tr>
       </thead>
-      <tbody>
+      <tbody id="item-list">
 
           <!--Use a while loop to make a table row for every DB row-->
           <?php while ($row = mysqli_fetch_array($result)) : ?>
