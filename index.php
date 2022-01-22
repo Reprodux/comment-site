@@ -31,28 +31,7 @@ $result = mysqli_query($conn,$query);
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src='time.js'></script>
-    <script type="text/javascript" >
-        $(function() {
-
-            $(".delbutton").click(function() {
-                var del_id = $(this).attr("id");
-                var info = 'id=' + del_id;
-                if (confirm("Sure you want to delete this post? This cannot be undone later.")) {
-                    $.ajax({
-                        type : "POST",
-                        url : "delete.php", //URL to the delete php script
-                        data : info,
-                        success : function() {
-                        }
-                    });
-                    $(this).parents(".record").animate("fast").animate({
-                        opacity : "hide"
-                    }, "slow");
-                }
-                return false;
-            });
-        });
- </script>
+      
 
     <div class="header">
       <div class="time" id ='clock'></div>
@@ -93,10 +72,9 @@ $result = mysqli_query($conn,$query);
       </div>
     </div>
 
-    <!--
     <script>
       setInterval(function() { $("#item-list").load("load-items.php")}, 4000);
-    </script>-->
+    </script>
     <div class="reminder-container">
       <table>
       <thead>
@@ -110,9 +88,11 @@ $result = mysqli_query($conn,$query);
           <?php while ($row = mysqli_fetch_array($result)) : ?>
           <tr>
                 <!--Each table column is echoed in to a td cell-->
-                <td><?php echo $row['item']; ?></td><button id="<?php echo $row['id']; ?>" class="delbutton" >delete</button></td>
+                <td><?php echo $row['item']; ?></td>
           </tr>
-          
+          <tr>
+            <td><a id="button" class= 'button' href="delete.php?id=<?php echo $row['id']; ?>" >Delete Entry</a></td>
+          </tr>
           <?php endwhile ?>
           <?
           mysqli_close($conn)
