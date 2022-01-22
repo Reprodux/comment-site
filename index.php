@@ -93,9 +93,10 @@ $result = mysqli_query($conn,$query);
       </div>
     </div>
 
+    <!--
     <script>
       setInterval(function() { $("#item-list").load("load-items.php")}, 4000);
-    </script>
+    </script>-->
     <div class="reminder-container">
       <table>
       <thead>
@@ -109,7 +110,7 @@ $result = mysqli_query($conn,$query);
           <?php while ($row = mysqli_fetch_array($result)) : ?>
           <tr>
                 <!--Each table column is echoed in to a td cell-->
-                <td><?php echo $row['item']; ?><button id="<?php echo $row['id']; ?>" class="delbutton"></button></td></td>
+                <td><?php echo $row['item']; ?></td><button id="<?php echo $row['id']; ?>" class="delbutton">delete</button></td>
           </tr>
           
           <?php endwhile ?>
