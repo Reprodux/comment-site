@@ -110,7 +110,7 @@ $result = mysqli_query($conn,$query);
           <?php while ($row = mysqli_fetch_array($result)) : ?>
           <tr>
                 <!--Each table column is echoed in to a td cell-->
-                <td><?php echo $row['item']; ?></td><button id="<?php echo $row['id']; ?>" class="delbutton">delete</button></td>
+                <td><?php echo $row['item']; ?></td><button id="<?php echo $row['id']; ?>" class="delbutton" onclick="">delete</button></td>
           </tr>
           
           <?php endwhile ?>
