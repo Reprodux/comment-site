@@ -34,7 +34,7 @@ $result = mysqli_query($conn,$query);
     <script type="text/javascript" >
         $(function() {
 
-            $(".delbutton").click(function() {
+            $(".delbutton").onclick = function() {
                 var del_id = $(this).attr("id");
                 var info = 'id=' + del_id;
                 if (confirm("Sure you want to delete this post? This cannot be undone later.")) {
@@ -110,7 +110,7 @@ $result = mysqli_query($conn,$query);
           <?php while ($row = mysqli_fetch_array($result)) : ?>
           <tr>
                 <!--Each table column is echoed in to a td cell-->
-                <td><?php echo $row['item']; ?></td><button id="<?php echo $row['id']; ?>" class="delbutton" onclick="">delete</button></td>
+                <td><?php echo $row['item']; ?></td><button id="<?php echo $row['id']; ?>" class="delbutton" >delete</button></td>
           </tr>
           
           <?php endwhile ?>
