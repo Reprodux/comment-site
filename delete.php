@@ -14,7 +14,7 @@ $query = "SELECT * FROM to_do";
   mysqli_query($conn, $query) or die('Error querying database');
 
 $id=$_POST['id'];
-$delete = "DELETE FROM table WHERE id=$id";
+$delete = "DELETE FROM to_do WHERE id=$id";
 $result = mysql_query($delete) or die(mysql_error());
 
 /*
