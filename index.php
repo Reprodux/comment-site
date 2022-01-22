@@ -34,7 +34,7 @@ $result = mysqli_query($conn,$query);
     <script type="text/javascript" >
         $(function() {
 
-            $(".delbutton").onclick = function() {
+            $(".delbutton").click(function() {
                 var del_id = $(this).attr("id");
                 var info = 'id=' + del_id;
                 if (confirm("Sure you want to delete this post? This cannot be undone later.")) {
