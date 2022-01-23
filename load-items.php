@@ -11,6 +11,7 @@
 
     $result = mysqli_query($conn,$query);
     while ($row = mysqli_fetch_array($result)) {
+        echo "<script type='text/javascript' src='autodelete.js'></script>";
         echo "<tr>";
         echo "<td>";
         echo $row['item'];
@@ -20,11 +21,11 @@
         $id = "delete.php?id=";
         $id .= $row['id'];
         //echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
-        echo "<td><a id=";
+        echo "<td><button id=";
         echo $row['id'];
-        echo " href='autodelete.js' onclick='delete_data('";
+        echo " onclick='delete_data('";
         echo $row['id'];
-        echo ")'p>Delete Entry</a></td>";
+        echo ")'p>Delete Entry</button></td>";
         echo "</tr>";
     }
     
