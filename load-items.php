@@ -17,11 +17,11 @@
         echo $row['item'];
         echo "</td>";
         echo "</tr>";
-        echo "<tr><td>";
+        echo "<tr><br>";
         $id = "delete.php?id=";
         $id .= $row['id'];
         //echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
-        echo "<button id=";
+        echo "<td><button id=";
         echo $row['id'];
         echo " onclick='delete_data('";
         echo $row['id'];
