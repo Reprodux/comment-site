@@ -31,28 +31,23 @@ $result = mysqli_query($conn,$query);
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src='time.js'></script>
-    <script type="text/javascript" >
-        $(function() {
-
-            $(".delbutton").click(function() {
-                var del_id = $(this).attr("id");
-                var info = 'id=' + del_id;
-                if (confirm("Sure you want to delete this post? This cannot be undone later.")) {
-                    $.ajax({
-                        type : "POST",
-                        url : "delete.php", //URL to the delete php script
-                        data : info,
-                        success : function() {
-                        }
-                    });
-                    $(this).parents(".record").animate("fast").animate({
-                        opacity : "hide"
-                    }, "slow");
-                }
-                return false;
-            });
-        });
- </script>
+    <script type="text/javascript">
+            function delete_data(id) {
+            var info = 'id=' + id;
+            if(confirm("Are you sure you want to delete this Record?")){
+                $.ajax
+                ({
+                    type:'POST',
+                    url:'delete.php',
+                    data:info,
+                    success:function(data) {
+                            $("#row" + id).remove();
+                    }
+                });
+            }
+        }
+    </script>
+    </html>
       
 
     <div class="header">
@@ -114,7 +109,7 @@ $result = mysqli_query($conn,$query);
           </tr>
           <tr>
             <!--<td><a id="button" class= 'button' href="delete.php?id=<?php echo $row['id']; ?>" >Delete Entry</a></td>-->
-            <td><button id="<?php echo $row['id']; ?>" class="delbutton">Delete Entry ^</button></td>
+            <td><button id="<?php echo $row['id']; ?>" class="button" onclick="delete_data(<?php echo $row['id']; ?>)"p>Delete Entry</button></td>
           </tr>
           <?php endwhile ?>
           <?
