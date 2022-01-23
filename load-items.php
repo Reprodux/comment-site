@@ -22,7 +22,7 @@
         //echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
         echo "<td><a id=";
         echo $row['id'];
-        echo " href='#' onclick='delete_data('";
+        echo " href='autodelete.js' onclick='delete_data('";
         echo $row['id'];
         echo ")'p>Delete Entry</a></td>";
         echo "</tr>";
