@@ -93,7 +93,7 @@ $result = mysqli_query($conn,$query);
           </tr>
           <tr>
             <!--<td><a id="button" class= 'button' href="delete.php?id=<?php echo $row['id']; ?>" >Delete Entry</a></td>-->
-            <td><button id="<?php echo $row['id']; ?>" class="button" onclick="delete_data(<?php echo $row['id']; ?>)"p>Delete Entry</button></td>
+            <td><a id="<?php echo $row['id']; ?>" class="button" onclick="delete_data(<?php echo $row['id']; ?>)"p>Delete Entry</a></td>
           </tr>
           <?php endwhile ?>
           <?
