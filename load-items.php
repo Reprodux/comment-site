@@ -11,17 +11,17 @@
 
     $result = mysqli_query($conn,$query);
     while ($row = mysqli_fetch_array($result)) {
-        echo "<script type='text/javascript' src='autodelete.js'></script>";
+        ?><script type='text/javascript' src='autodelete.js'></script>"<?php
         echo "<tr>";
         echo "<td>";
         echo $row['item'];
         echo "</td>";
         echo "</tr>";
-        echo "<tr>";
+        echo "<tr><td>";
         $id = "delete.php?id=";
         $id .= $row['id'];
         //echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
-        echo "<td><button id=";
+        echo "<button id=";
         echo $row['id'];
         echo " onclick='delete_data('";
         echo $row['id'];
