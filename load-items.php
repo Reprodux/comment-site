@@ -20,6 +20,11 @@
         $id = "delete.php?id=";
         $id .= $row['id'];
         echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
+        echo "<td><button id=";
+        echo $row['id'];
+        echo " class='button' onclick='delete_data('";
+        echo $row['id'];
+        echo ")'p>Delete Entry</button></td>";
         echo "</tr>";
     }
     
