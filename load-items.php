@@ -23,7 +23,7 @@
         echo "<script type='text/javascript' src='autodelete.js'></script>";
         echo "<td><a id=";
         echo $row['id'];
-        echo " class ='button' onclick='delete_data('";
+        echo " class ='button' onclick='delete_data(";
         echo $row['id'];
         echo ")'p>Delete Entry</a></td>";
         echo "</tr>";
