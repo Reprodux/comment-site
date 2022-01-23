@@ -31,24 +31,8 @@ $result = mysqli_query($conn,$query);
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src='time.js'></script>
-    <script type="text/javascript">
-            function delete_data(id) {
-            var info = 'id=' + id;
-            if(confirm("Are you sure you want to delete this Record?")){
-                $.ajax
-                ({
-                    type:'POST',
-                    url:'delete.php',
-                    data:info,
-                    success:function(data) {
-                            $("#row" + id).remove();
-                    }
-                });
-            }
-        }
-    </script>
     </html>
-      
+    <script type="text/javascript" src="autodelete.js"></script>
 
     <div class="header">
       <div class="time" id ='clock'></div>
