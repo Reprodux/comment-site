@@ -11,7 +11,6 @@
 
     $result = mysqli_query($conn,$query);
     while ($row = mysqli_fetch_array($result)) {
-        ?><script type='text/javascript' src='autodelete.js'></script>"<?php
         echo "<tr>";
         echo "<td>";
         echo $row['item'];
