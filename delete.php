@@ -14,8 +14,10 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 $query = "SELECT * FROM to_do";
   mysqli_query($conn, $query) or die('Error querying database');
 
-$id = $_GET['id'];
+$id = $_POST['id'];
+$delete = mysqli_query($conn, "DELETE FROM to_do WHERE id = '$id'")or die(mysql_error());
 
+/*
 $delete = mysqli_query($conn, "DELETE FROM to_do WHERE id = '$id'");
 
 echo $delete;
@@ -28,6 +30,6 @@ if($delete){
 else{
     echo "Error deleting record";
 }
-
+*/
 
 ?>
