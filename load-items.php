@@ -20,6 +20,7 @@
         $id = "delete.php?id=";
         $id .= $row['id'];
         //echo "<td><a id='button' class= 'button' href='$id' >Delete Entry</a></td>";
+        echo "<script type='text/javascript' src='autodelete.js'></script>";
         echo "<td><a id=";
         echo $row['id'];
         echo " class ='button' onclick='delete_data('";
